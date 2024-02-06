@@ -3,7 +3,7 @@ import useFetch from "../utils/useFetch";
 import Loading from '../components/Loading';
 
 const SwornMember = ({ url }) => {
-    const { data, loading, error } = useFetch(url);
+    const { data, loading } = useFetch(url);
     let member = data;
     if(loading) return <Loading />;
     return (
