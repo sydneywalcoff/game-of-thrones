@@ -1,10 +1,16 @@
 import useFetch from "../utils/useFetch";
 
+import Loading from '../components/Loading';
+
 const SwornMember = ({ url }) => {
     const { data, loading, error } = useFetch(url);
-    console.log(data)
+    let member = data;
+    if(loading) return <Loading />;
     return (
-        <div>member</div>
+        <div className="member">
+            <div>{member && member.name}</div>
+            <div>{member && member.died}</div>
+        </div>
     );
 };
 
