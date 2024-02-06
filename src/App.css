@@ -1,0 +1,22 @@
+.App {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.house:not(:last-of-type) {
+  margin-bottom: 32px;
+}
+
+.member-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.member-list .no-members {
+  text-align: center;
+  width: 100%;
+}
