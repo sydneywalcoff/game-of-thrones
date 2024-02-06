@@ -4,7 +4,9 @@ import House from './House';
 import Loading from './Loading';
 
 const HouseList = () => {
-    const { data: houseList, loading, error } = useFetch('https://anapioficeandfire.com/api/houses');
+    const { data, loading, error } = useFetch('https://anapioficeandfire.com/api/houses');
+    data?.sort((a,b)=> b.swornMembers.length - a.swornMembers.length);
+    let houseList = data;
 
     if(loading) return <Loading/>
 

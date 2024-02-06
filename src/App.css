@@ -3,20 +3,48 @@
   margin: 0 auto;
 }
 
-h2 {
+h2,
+h3 {
   text-align: center;
 }
 
-.house:not(:last-of-type) {
+.emoji {
+  font-size: 1.25em;
+}
+
+.house-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.house {
+  width: 49%;
+  border-radius: 8px;
+  /* box-shadow: ; */
   margin-bottom: 32px;
+
+}
+
+.house:nth-of-type(odd) {
+  margin-right: 1%;
+}
+
+.house:nth-of-type(even) {
+  margin-left: 1%;
 }
 
 .member-list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .member-list .no-members {
   text-align: center;
+  width: 100%;
+}
+
+.member-list .member {
   width: 100%;
 }
