@@ -2,7 +2,7 @@ import SwornMember from './SwornMember';
 
 const SwornMemberList = ({ list }) => {
     let memberList = list;
-    memberList.forEach(item => console.log(item))
+
     return (
         <div class="sworn-member-list">
             <h3>Sworn Members <span class="emoji">⚔️</span></h3>

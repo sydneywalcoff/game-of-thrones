@@ -3,9 +3,8 @@ import useFetch from "../utils/useFetch";
 import Loading from '../components/Loading';
 
 const SwornMember = ({ url }) => {
-    const { data, loading, error } = useFetch(url);
+    const { data, error } = useFetch(url);
     let member = data;
-    if (loading) return <Loading />;
     if (error) return 'Oh no!';
     return (
         <div className="member">
@@ -18,9 +17,7 @@ const SwornMember = ({ url }) => {
                 {member && member.died ? (
                     <p>{member && member.died}</p>
                 ) : (
-                    <>
-                        <p> alive! <span className="xtiny">...for now</span></p>
-                    </>
+                    <p>alive! <span className="xtiny">...for now</span></p>
                 )}
             </div>
         </div>
